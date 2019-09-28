@@ -1,0 +1,30 @@
+---
+kind: pipeline
+type: docker
+name: a
+
+platform:
+  arch: amd64
+  os: linux
+
+steps:
+- name: hello-worlda
+  image: docker/whalesay
+  commands:
+  - cowsay this is a
+
+---
+kind: pipeline
+type: docker
+name: b
+
+platform:
+  arch: amd64
+  os: linux
+
+steps:
+- name: hello-worldb
+  image: docker/whalesay
+  commands:
+  - sleep 10
+  - cowsay this is b
