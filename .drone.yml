@@ -46,3 +46,23 @@ steps:
     status:
     - success
     - failure
+
+---
+kind: pipeline
+type: docker
+name: C
+
+platform:
+  arch: amd64
+  os: linux
+
+steps:
+- name: hello-worldaaaaaavv
+  image: docker/whalesay
+  commands:
+  - cowsay this is c
+
+- name: hello-worldaaavvfffffffffffffaaaaaaaaaa
+  image: docker/whalesay
+  commands:
+  - cowsay $DRONE_JOB_STATUS
