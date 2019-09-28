@@ -13,6 +13,11 @@ steps:
   commands:
   - cowsay this is a
 
+- name: hello-worlda
+  image: docker/whalesay
+  commands:
+  - cowsay $DRONE_JOB_STATUS
+
 ---
 kind: pipeline
 type: docker
