@@ -13,7 +13,7 @@ steps:
   commands:
   - cowsay this is a
 
-- name: hello-worlda
+- name: hello-worldaaaaaaaaaaaaa
   image: docker/whalesay
   commands:
   - cowsay $DRONE_JOB_STATUS
