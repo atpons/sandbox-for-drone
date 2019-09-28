@@ -31,5 +31,4 @@ steps:
 - name: hello-worldb
   image: docker/whalesay
   commands:
-  - sleep 10
-  - cowsay this is b
+  - exit 1
