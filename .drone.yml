@@ -31,4 +31,18 @@ steps:
 - name: hello-worldb
   image: docker/whalesay
   commands:
+  - cowsay fail
+
+- name: hello-worldbaaaaaa
+  image: docker/whalesay
+  commands:
   - exit 1
+
+- name: hello-worldaaaaaaaaaaaaa
+  image: docker/whalesay
+  commands:
+  - cowsay $DRONE_JOB_STATUS
+  when:
+    status:
+    - success
+    - failure
